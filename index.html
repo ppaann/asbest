@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Asbest demo</title>
+        <link rel="stylesheet" href="stylesheets/main.css">
+    </head>
+    <body ng-app="asbest">
+        <nav id="navigation">
+            <button id="btn-main-menu" class="btn btn-default collapsed" type="button" data-toggle="modal" data-target="#main-navigation" aria-expanded="false">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+            <div id="main-navigation" class="">
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="separator" class="divider"></li>
+                    <li class="active"><a href="#">Projects</a></li>
+                    <li><a href="#">Current Project</a></li>
+                </ul>
+                <ul id="main-nav-bottom" class="nav nav-pill nav-stacked">
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Isännöiitsijäntodistus</a></li>
+                    <li><a href="#">Quotation</a></li>
+                    <li><a href="#">Asuntotaulukko</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="main-container">Main container</div>
+        <div id="footer">Footer</div>
+        <script src="js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+    </body>
+</html>
