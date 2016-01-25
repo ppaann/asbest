@@ -1,35 +1,40 @@
-nav#navigation{
+#btn-main-menu{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: $zindex-modal+1;
+}
+#navigation{
   position: absolute;
   top: 0;
-  left: 0;
+  left: -340px;
+  height: 100vh;
+  width: 340px;
+  border-right: 1px solid $gray-lighter;
+  box-shadow: 2px 0 5px $gray-lighter;
 
-  #btn-main-menu{
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: $zindex-modal+1;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transform: translateX(0px);
+
+  &.menu-open{
+    transform: translatex(340px);
   }
 
-
-  // the menu
-  #main-navigation{
-    position: relative;
-    left: 0;
-    width: 340px;
-    height: 100vw;
-    padding-top: 80px;
-
-    z-index: $zindex-modal;
-    background-color: $modal-content-bg;
-
-    #main-nav-bottom{
-      position: absolute;
-      bottom: -400px;
-    }
-  }
   .divider{
     height: 1px;
     background-color: #e2e2e2;
   }
-
+}
+#main-navi-head{
+  padding-left: 90px;
+  height: 80px;
+  padding-top: 18px;
+}
+#main-navi-content{
+  height: calc(100% - 230px);
+  border-top: 1px solid $gray-lighter;
+}
+#main-navi-bottom{
+  border-top: 1px solid $gray-lighter;
 }
