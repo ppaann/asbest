@@ -19,7 +19,7 @@
                 <div id="main-navi-content">
                     <ul class="nav nav-pills nav-stacked">
                         <li role="separator" class="divider"></li>
-                        <li class="active"><a href="#">Projects</a></li>
+                        <li class="active"><a href="#/projects">Projects</a></li>
                         <li><a href="#">Current Project</a></li>
                     </ul>
                 </div>
@@ -33,13 +33,20 @@
                 </div>
             </nav>
     </div>
-        <div id="main-container">Main container</div>
+        <div id="main-container">
+        <ng-view></ng-view>
+        </div>
         <div id="footer">Footer</div>
         <script src="js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.min.js"></script>
+
         <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
+
         <script src="app/js/app.js"></script>
         <script src="app/js/controllers/mainNaviController.js"></script>
     </body>
