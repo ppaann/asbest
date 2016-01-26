@@ -1,6 +1,9 @@
 
 body{
   position: relative;
+  #main-container{
+    height: 100vh;
+  }
 }
 
 @media screen and (min-device-width: 768px){

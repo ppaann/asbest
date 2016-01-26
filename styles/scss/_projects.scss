@@ -1,0 +1,18 @@
+#project-page-title{
+  padding-left: 54px;
+}
+#project-list{
+  list-style: none;
+}
+.project-thumbnail{
+  &:hover{
+    background-color: darken(#F5F5F5, 10%); 
+    box-shadow: 3px 3px 3px #F5F5F5;
+  }
+}
+a.project-link{
+  color: black;
+  &:hover{
+    text-decoration: none;
+  }
+}

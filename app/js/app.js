@@ -10,7 +10,7 @@ asbest.config(['$routeProvider', function($routeProvider){
     when('/projects', {
       templateUrl: 'app/templates/allProjects.html',
     }).
-    when('/project/', {
+    when('/project/:projectName', {
       templateUrl: 'app/templates/project.html',
     }).
     otherwise ({
