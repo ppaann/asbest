@@ -7,13 +7,13 @@ asbest.factory('projectData', function(){
       "date": "13/01/16",
       "floorplans":[{
           "id": 1,
-          "name": 1,
-          "image": "demo-kerros1.png"
+          "name": "floorplan1",
+          "imagePath": "demo-kerros1.png"
         },
         {
           "id": 2,
-          "name": 2,
-          "image": "demo-floorplan2.jpg"
+          "name": "floorplan2",
+          "imagePath": "demo-floorplan2.jpg"
       }],
     },
     {
@@ -23,11 +23,11 @@ asbest.factory('projectData', function(){
       "date": "12/01/16",
       "floorplans":[{
           "id": 1,
-          "image": "demo-kerros1.png"
+          "imagePath": "demo-kerros1.png"
         },
         {
           "id": 2,
-          "image": "demo-floorplan2.jpg"
+          "imagePath": "demo-floorplan2.jpg"
       }],
     }];
 
@@ -43,5 +43,13 @@ asbest.factory('projectData', function(){
           }
         }
       },
+      getProjectFloorPlan: function(projectName, floorplanId){
+        var project = this.getProjectByName(projectName);
+        for(var i = 0; i < project.floorplans.length; i++){
+          if(project.floorplans[i].id == floorplanId){
+            return project.floorplans[i];
+          }
+        }
+      }
     };
 });

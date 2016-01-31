@@ -1,0 +1,18 @@
+<div class="workspace">
+  <div class="container-fluid">
+      <div id="floorplan" >
+        <div class="toolbar">
+        </div>
+        <div class="image">
+          <img src="app/images/{{floorplan.imagePath}}" ng-click="onClickImage($event)"></img>
+        </div>
+          
+      </div>
+  </div>
+  <div class="context-menu">
+    <ul class="list-group">
+      <li class="list-group-item" ng-click="onInspection()">Inspection</li>
+      <li class="list-group-item" ng-click= "onSample()">Sample</li>
+    </ul>
+  </div>
+</div>

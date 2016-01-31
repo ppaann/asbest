@@ -21,7 +21,7 @@
                         <li role="separator" class="divider"></li>
                         <li ng-repeat= "project in projects">
                           <a href="#/project/{{project.name}}">{{project.name}}</a>
-                          <ul class="nav nav-pills nav-stacked">
+                          <ul class="nav nav-pills nav-stacked sub-menu">
                             <li ng-repeat="plan in project.floorplans">
                               <a href="#/project/{{project.name}}/{{plan.id}}"> {{plan.name}}</a>
                             </li>
@@ -38,7 +38,7 @@
                     </ul>
                 </div>
             </nav>
-    </div>
+        </div>
         <div id="main-container">
             <ng-view></ng-view>
         </div>
@@ -51,11 +51,14 @@
         <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 
         <script src="app/js/app.js"></script>
         <script src="app/js/services/projectData.js"></script>
+        <script src="app/js/directives/contextMenu.js"></script>
         <script src="app/js/controllers/mainNaviController.js"></script>
         <script src="app/js/controllers/projectsController.js"></script>
         <script src="app/js/controllers/projectDetailController.js"></script>
+        <script src="app/js/controllers/workspaceController.js"></script>
     </body>
 </html>
