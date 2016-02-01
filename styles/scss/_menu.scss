@@ -2,7 +2,7 @@
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: $zindex-modal+1;
+  z-index: 999;
 }
 #navigation{
   position: absolute;
@@ -10,7 +10,7 @@
   left: -340px;
   height: 100vh;
   width: 340px;
-  z-index: 1050;
+  z-index: 1000;
   background-color: white;
   border-right: 1px solid $gray-lighter;
   box-shadow: 2px 0 5px $gray-lighter;

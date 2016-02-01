@@ -9,20 +9,24 @@ asbest.controller('workspaceController', function($scope, $routeParams, $uibModa
     console.log($scope.floorplan);
 
     $scope.onClickImage = function(e){
-      console.log(e, e.x, e.y, e.offsetX, e.offsetY);
       $(".context-menu").css('display', 'block').offset({top:e.offsetY, left:e.offsetX});
     }
     $scope.onInspection = function(){
-      console.log("inspec");
       var modalInstance = $uibModal.open({
         animation: true,
+        windowClass: 'asbestDialog',
         templateUrl: 'app/templates/modelInspection.html',
-        //controller: 'modelInspectionController'
+        controller: 'modelInspectionController'
       });
 
     }
     $scope.onSample = function(){
-      console.log("sample");
+      var modalInstance = $uibModal.open({
+        animation: true,
+        windowClass: 'asbestDialog',
+        templateUrl: 'app/templates/modelSample.html',
+        controller: 'modelInspectionController'
+      });
     }
-    
+
 })

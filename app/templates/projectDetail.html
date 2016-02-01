@@ -8,7 +8,7 @@
         <li class="col-md-3" ng-repeat="plan in project.floorplans">
             <a href="#/project/{{project.name}}/{{plan.id}}">
                 <div class="floorplan-thumbnali well">
-                    <img src="app/images/{{plan.image}}" alt="floorplan"></img>
+                    <img src="app/images/{{plan.imagePath}}" alt="{{plan.id}}"></img>
                 </div>
                 <div>{{plan.name}}</div>
             </a>

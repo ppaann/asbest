@@ -1,0 +1,67 @@
+.asbestDialog .modal-dialog{
+    width: calc(100vw - 45px);
+    height: 100vh;
+    margin: 10px;
+
+    .modal-body{
+        height: calc(100vh - 160px);
+    }
+    .modal-footer{
+        text-align: inherit;
+    }
+    #noteInput{
+        min-height: 50px;
+    }
+    #btn-ok{
+        margin-left: 15px;
+    }
+    #btn-cancel{
+        float: right;
+    }
+    h4{
+        margin-left: 15px;
+        padding-bottom: 5px;
+    }
+}
+#inputArea{
+    border-left: 1px solid $gray-light;
+    #top-content{
+        padding-bottom:20px;
+        border-bottom: 1px solid $gray-light;
+    }
+    #main-content{
+        padding-top: 20px;
+    }
+}
+
+
+.item-list{
+    list-style: outside none none;
+    li{
+        float: left;
+        padding: 10px;
+    }
+}
+.mockup-pic{
+    background-color: $gray;
+    border: 1px solid $gray-dark;
+    display: inline-block;
+    &:before{
+        content: "Picture";
+        color: white;
+        text-align: center;
+    }
+}
+.tile{
+    height: 50px;
+    width: 50px;
+}
+.form-inline{
+    label+div{
+        display: inline-block;
+        margin-left: 10px;
+    }
+    label{
+        width: 33%;
+    }
+}

@@ -1,6 +1,6 @@
 'use strict';
 
-var asbest = angular.module('asbest', ['ngRoute','ui.bootstrap']);
+var asbest = angular.module('asbest', ['ngRoute','ngAnimate', 'ui.bootstrap']);
 
 asbest.config(['$routeProvider', function($routeProvider){
   $routeProvider.
@@ -19,6 +19,10 @@ asbest.config(['$routeProvider', function($routeProvider){
     when('/project/:projectName/:floorplan', {
       templateUrl: 'app/templates/workspace.html',
       controller: "workspaceController"
+    }).
+    when('/project/mockup/modelInspection', {
+      templateUrl: 'app/templates/modelInspection.html',
+      controller: "modelInspectionController"
     }).
     otherwise ({
       redirectTo: '/'
