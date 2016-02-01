@@ -1,12 +1,13 @@
 <div class="container">
-<div class="row">
-    <h1>{{project.name}}</h1>
+<div class="row ">
+    <a id="btn-nav-back" href="#/projects" type="button" class="btn btn-default pull-left"> <span class="glyphicon glyphicon-arrow-left"></span> </a>
+    <h1 class="pull-left">{{project.name}}</h1>
 </div>
 <div class="row">
     <h2>Floor Plans</h2>
     <ul id="floorplans">
         <li class="col-md-3" ng-repeat="plan in project.floorplans">
-            <a href="#/project/{{project.name}}/{{plan.id}}">
+            <a href="#/project/{{project.id}}/{{plan.id}}">
                 <div class="floorplan-thumbnali well">
                     <img src="app/images/{{plan.imagePath}}" alt="{{plan.id}}"></img>
                 </div>

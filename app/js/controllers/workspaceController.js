@@ -4,14 +4,14 @@ asbest.controller('workspaceController', function($scope, $routeParams, $uibModa
 
     $scope.floorplan = null;
     if($routeParams.floorplan != undefined){
-      $scope.floorplan = projectData.getProjectFloorPlan($routeParams.projectName, $routeParams.floorplan);
+      $scope.floorplan = projectData.getProjectFloorPlan($routeParams.projectId, $routeParams.floorplan);
     }
-    console.log($scope.floorplan);
 
     $scope.onClickImage = function(e){
       $(".context-menu").css('display', 'block').offset({top:e.offsetY, left:e.offsetX});
     }
     $scope.onInspection = function(){
+      $(".context-menu").css('display', 'none');
       var modalInstance = $uibModal.open({
         animation: true,
         windowClass: 'asbestDialog',
@@ -21,6 +21,7 @@ asbest.controller('workspaceController', function($scope, $routeParams, $uibModa
 
     }
     $scope.onSample = function(){
+      $(".context-menu").css('display', 'none');
       var modalInstance = $uibModal.open({
         animation: true,
         windowClass: 'asbestDialog',

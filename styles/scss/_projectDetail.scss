@@ -1,9 +1,14 @@
 #floorplans{
     .floorplan-thumbnali{
         img{
+            padding: 20px;
             width: 200px;
             height: 150px;
         }
-
+    }
+    .image{
+        img{
+            margin: 20px;
+        }
     }
 }

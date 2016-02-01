@@ -8,15 +8,11 @@ asbest.config(['$routeProvider', function($routeProvider){
       templateUrl: 'app/templates/allProjects.html',
       controller: "projectsController"
     }).
-    when('/projects', {
-      templateUrl: 'app/templates/allProjects.html',
-      controller: "projectsController"
-    }).
-    when('/project/:projectName', {
+    when('/project/:projectId', {
       templateUrl: 'app/templates/projectDetail.html',
       controller: "projectDetailController"
     }).
-    when('/project/:projectName/:floorplan', {
+    when('/project/:projectId/:floorplan', {
       templateUrl: 'app/templates/workspace.html',
       controller: "workspaceController"
     }).
