@@ -1,5 +1,10 @@
 .workspace{
   position: relative;
+  #btn-back{
+    position: absolute;
+    left: 80px;
+    top: 20px;
+  }
 }
 .context-menu{
   width: 200px;

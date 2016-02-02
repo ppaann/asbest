@@ -2,6 +2,7 @@
 
 asbest.controller('modelInspectionController', function($scope, $uibModalInstance){
   $scope.mockupPicCount = 5;
+  $scope.inputItems = null;
   $scope.items = [
     'Lorem ipsum.',
     'Accusantium, cumque!',
@@ -34,7 +35,13 @@ asbest.controller('modelInspectionController', function($scope, $uibModalInstanc
     'Repellat, quod.',
     'Quidem, saepe!'
   ];
+  $scope.exam = null;
+  $scope.exams=['ASB', 'Pb', 'RM', 'PAH'];
 
+  $scope.onChooseExam = function(){
+    $scope.inputItems = $scope.exams;
+    console.log($scope.inputItems);
+  }
 
   $scope.ok = function () {
     $uibModalInstance.close();

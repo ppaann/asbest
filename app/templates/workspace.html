@@ -2,6 +2,9 @@
   <div class="container-fluid">
       <div id="floorplan" >
         <div class="toolbar">
+          <a href="#/project/{{projectId}}">
+            <button id="btn-back" class="btn btn-default"> <span class="glyphicon glyphicon-arrow-left"></span></button>
+          </a>
         </div>
         <div class="image-full">
           <img src="app/images/{{floorplan.imagePath}}" ng-click="onClickImage($event)"></img>

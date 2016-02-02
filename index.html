@@ -23,7 +23,8 @@
                           <a href="#/project/{{project.id}}">{{project.name}}</a>
                           <ul class="nav nav-pills nav-stacked sub-menu">
                             <li ng-class="isCurrentRoute(project.id, plan.id)" ng-repeat="plan in project.floorplans">
-                              <a href="#/project/{{project.id}}/{{plan.id}}"> {{plan.name}}</a>
+                                
+                              <a href="#/project/{{project.id}}/{{plan.id}}">{{plan.id}} {{plan.name}}</a>
                             </li>
                           </ul>
                           <ul class="nav nav-pill nav-stacked">
@@ -46,7 +47,6 @@
         <div id="main-container">
             <ng-view></ng-view>
         </div>
-        <script src="js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
@@ -56,6 +56,8 @@
 
         <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
         <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 
         <script src="app/js/app.js"></script>
         <script src="app/js/services/projectData.js"></script>

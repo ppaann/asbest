@@ -3,6 +3,7 @@
 asbest.controller('workspaceController', function($scope, $routeParams, $uibModal, projectData){
 
     $scope.floorplan = null;
+    $scope.projectId = $routeParams.projectId;
     if($routeParams.floorplan != undefined){
       $scope.floorplan = projectData.getProjectFloorPlan($routeParams.projectId, $routeParams.floorplan);
     }

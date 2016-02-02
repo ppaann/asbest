@@ -85,7 +85,7 @@
                     <div class="form-group col-sm-6">
                         <label for="" >Tutkimus</label>
                         <div>
-                            <p class="form-control-static">Select from right</p>
+                            <p class="form-control-static">{{exam}}</p><button class="btn btn-default" ng-click="onChooseExam()">Tutkimus</button>
                         </div>
                     </div>
                     <div class="form-group col-sm-6">
@@ -121,9 +121,10 @@
             <h4>All items</h4>
             <div class="col-sm-12">
                 <ul class="item-list">
-                    <li ng-repeat="item in items">
-                    <button class="btn-default">{{item}}</button></li>
-
+                    {{inputItems}}
+                    <li ng-repeat="item in inputItems">
+                        <button class="btn-default" uib-btn-radio="'{{item}}'">{{item}}</button>
+                    </li>
                 </ul>
             </div>
         </div>
