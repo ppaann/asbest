@@ -24,6 +24,7 @@ asbest.controller('workspaceController', function($scope, $routeParams, $uibModa
     }
     $scope.onSample = function(){
       $(".context-menu").css('display', 'none');
+      $("#poi_setting").addClass('open');
       // var modalInstance = $uibModal.open({
       //   animation: true,
       //   windowClass: 'asbestDialog',

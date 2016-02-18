@@ -13,6 +13,7 @@ asbest.controller('mainNaviController',
         return $route.current.params.projectId === projectId ? 'active' : '';
     }
     $scope.isCurrentRoute = function(projectId, floorplanId){
+      if(typeof $route.current !== 'undefined')
         return $route.current.params.projectId === projectId && $route.current.params.floorplan === floorplanId ? 'active' : '';
     }
   });

@@ -1,6 +1,6 @@
 'use restrict';
 
-asbest.controller('modelInspectionController', function($scope, $uibModalInstance){
+asbest.controller('modelInspectionController', function($scope){
   $scope.mockupPicCount = 5;
   $scope.inputItems = null;
   $scope.items = [
@@ -44,10 +44,10 @@ asbest.controller('modelInspectionController', function($scope, $uibModalInstanc
   }
 
   $scope.ok = function () {
-    $uibModalInstance.close();
+    $("#poi_setting").removeClass('open');
   };
 
   $scope.cancel = function () {
-    $uibModalInstance.dismiss('cancel');
+    $("#poi_setting").removeClass('open');
   };
 })

@@ -9065,7 +9065,24 @@ a.project-link:hover {
   transition-duration: 0.3s;
   transform: translateX(0);
 }
-/* line 16, ../styles/scss/_inspection-model.scss */
+/* line 14, ../styles/scss/_inspection-model.scss */
 #poi_setting.open {
   transform: translateX(-850px);
+}
+/* line 17, ../styles/scss/_inspection-model.scss */
+#poi_setting .modal-header ul {
+  padding-left: 0;
+}
+/* line 19, ../styles/scss/_inspection-model.scss */
+#poi_setting .modal-header ul li {
+  display: inline;
+  margin-right: 15px;
+}
+/* line 22, ../styles/scss/_inspection-model.scss */
+#poi_setting .modal-header ul li h3 {
+  display: inline;
+}
+/* line 25, ../styles/scss/_inspection-model.scss */
+#poi_setting .modal-header ul li.active h3 {
+  color: #337ab7;
 }
