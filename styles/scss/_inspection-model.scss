@@ -1,0 +1,19 @@
+#poi_setting{
+    position: absolute;
+    height: 100%;
+    right: -850px;
+    width: 850px;
+    top: 0px;
+    background-color: white;
+    border-left:1px solid gray;
+    box-shadow: 0 -5px 6px gray;
+
+
+
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transform: translateX(0);
+    &.open{
+        transform: translateX(-850px);
+    }
+}

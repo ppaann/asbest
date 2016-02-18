@@ -13,22 +13,23 @@ asbest.controller('workspaceController', function($scope, $routeParams, $uibModa
     }
     $scope.onInspection = function(){
       $(".context-menu").css('display', 'none');
-      var modalInstance = $uibModal.open({
-        animation: true,
-        windowClass: 'asbestDialog',
-        templateUrl: 'app/templates/modelInspection.html',
-        controller: 'modelInspectionController'
-      });
+      $("#poi_setting").addClass('open');
 
+      // var modalInstance = $uibModal.open({
+      //   animation: true,
+      //   windowClass: 'asbestDialog',
+      //   templateUrl: 'app/templates/modelInspection.html',
+      //   controller: 'modelInspectionController'
+      // });
     }
     $scope.onSample = function(){
       $(".context-menu").css('display', 'none');
-      var modalInstance = $uibModal.open({
-        animation: true,
-        windowClass: 'asbestDialog',
-        templateUrl: 'app/templates/modelSample.html',
-        controller: 'modelInspectionController'
-      });
+      // var modalInstance = $uibModal.open({
+      //   animation: true,
+      //   windowClass: 'asbestDialog',
+      //   templateUrl: 'app/templates/modelSample.html',
+      //   controller: 'modelInspectionController'
+      // });
     }
 
 })
