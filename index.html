@@ -12,37 +12,7 @@
             <button id="btn-main-menu" class="btn btn-default" ng-class="{'menuOpen': menuOpen}" type="button" ng-click="toggleMenu()">
                 <span class="glyphicon" ng-class="menuOpen ? 'glyphicon-arrow-left' : 'glyphicon-menu-hamburger'"></span>
             </button>
-            <nav id="navigation" ng-class="{'menu-open': menuOpen}">
-                <div id="main-navi-head">
-                    <a href="#/"><h3>Arto's projects</h3></a>
-                </div>
-                <div id="main-navi-content">
-                    <ul class="nav nav-pills nav-stacked ">
-                        <li role="separator" class="divider"></li>
-                        <li  ng-class="isCurrentRoute(project.id)" ng-repeat= "project in projects">
-                          <a href="#/project/{{project.id}}">{{project.name}}</a>
-                          <ul class="nav nav-pills nav-stacked sub-menu">
-                            <li ng-class="isCurrentRoute(project.id, plan.id)" ng-repeat="plan in project.floorplans">
-                                
-                              <a href="#/project/{{project.id}}/{{plan.id}}">{{plan.id}} {{plan.name}}</a>
-                            </li>
-                          </ul>
-                          <ul class="nav nav-pill nav-stacked">
-                              <li><a href="#">Isännöiitsijäntodistus</a></li>
-                              <li><a href="#">Quotation</a></li>
-                              <li><a href="#">Asuntotaulukko</a></li>
-                          </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div id="main-navi-bottom">
-                  <ul class="nav nav-pill nav-stacked">
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Settings</a></li>
-                      <li><a href="#">Feedback</a></li>
-                  </ul>
-                </div>
-            </nav>
+            <main-navigation></main-navigation>
         </div>
         <div id="main-container">
             <ng-view></ng-view>
@@ -62,6 +32,7 @@
         <script src="app/js/app.js"></script>
         <script src="app/js/services/projectData.js"></script>
         <script src="app/js/directives/contextMenu.js"></script>
+        <script src="app/js/directives/mainNavigation.js"></script>
         <script src="app/js/controllers/mainNaviController.js"></script>
         <script src="app/js/controllers/projectsController.js"></script>
         <script src="app/js/controllers/projectDetailController.js"></script>
