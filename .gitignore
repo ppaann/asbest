@@ -50,3 +50,6 @@ Temporary Items
 .sass-cache/
 dist/styles/css/main.css.map
 node_modules/
+/bower_components/
+!/dist/bower_components/
+
