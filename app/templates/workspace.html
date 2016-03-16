@@ -1,22 +1,48 @@
+
+<top-navigation></top-navigation>
 <div class="workspace">
   <div class="container-fluid">
       <div id="floorplan" >
-        <div class="toolbar">
-          <a href="#/project/{{projectId}}">
-            <button id="btn-back" class="btn btn-default"> <span class="glyphicon glyphicon-arrow-left"></span></button>
-          </a>
-        </div>
         <div class="image-full">
           <img src="app/images/{{floorplan.imagePath}}" ng-click="onClickImage($event)"></img>
         </div>
 
       </div>
   </div>
-  <div class="context-menu">
+
+<!--   <div class="context-menu">
     <ul class="list-group">
       <li class="list-group-item" ng-click="onInspection()">Inspection</li>
       <li class="list-group-item" ng-click="onSample()">Sample</li>
     </ul>
+  </div> -->
+
+<div class="workplace-toolbar">
+  <ul class="vertical-menu nav nav-pills nav-stacked">
+    <li class="item" ng-click = "openSubmenu($event)"><span>PO</span>
+      <ul class="submenu">
+        <li class="item actived"><span>PO</span></li>
+        <li class="item"><span>MO</span></li>
+      </ul>
+    </li>
+    <li class="item"><span class="glyphicon glyphicon-filter"></span></li>
+    <li class="item" 
+        ng-class="{'activated': photoActivated}"
+        ng-click = "takePhoto()">
+        <span class="glyphicon glyphicon-camera"></span></li>
+    <li class="item"><span class="glyphicon glyphicon-list-alt"></span></li>
+    <li class="item"><span class="glyphicon glyphicon-arrow-down"></span></li>
+  </ul>
+</div>
+</div>
+
+<div id="photo-dialog" class="container dialog" ng-show="showPhotoDialog">
+  <h3>Add Photo ...</h3>
+  <div class="close" 
+      ng-click="showPhotoDialog = !showPhotoDialog; photoActivated = !photoActivated "></div>
+  <div>
+    <button class="btn btn-primary" ng-click="newPhoto();">Take New Photo</button>
+    <button class="btn btn-primary">Choose From Existing</button>
   </div>
 </div>
 

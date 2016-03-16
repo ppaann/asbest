@@ -6,6 +6,7 @@ asbest.factory('projectData', function(){
       "address": "Visiokatu 3",
       "city": "Tampere",
       "date": "13/01/16",
+      "contact": "John Black",
       "floorplans":[{
           "id": "1",
           "name": "Kerros-1",
@@ -23,6 +24,7 @@ asbest.factory('projectData', function(){
       "address": "Yliopistokatu 2",
       "city": "Tampere",
       "date": "12/01/16",
+      "contact": "Color White",
       "floorplans":[{
           "id": "1",
           "name": "Kerros-1",

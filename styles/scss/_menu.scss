@@ -1,8 +1,8 @@
 #btn-main-menu{
   position: fixed;
-  top: 20px;
+  top: 8px;
   left: 20px;
-  z-index: 1001;
+  z-index: 1031;
 }
 #navigation{
   position: absolute;
@@ -41,7 +41,7 @@
 }
 #main-navi-head{
   padding-left: 90px;
-  height: 80px;
+  height: 70px;
   padding-top: 18px;
   a{
     color: $gray-lighter;
@@ -50,7 +50,7 @@
       color: $gray-light;
     }
     h3{
-      margin-top: 6px;
+      margin-top: -5px;
     }
   }
 }

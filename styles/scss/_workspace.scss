@@ -1,4 +1,8 @@
+/*
+* Workspace 
+*/
 .workspace{
+  padding: 70px 20px 20px 0;
   position: relative;
   #btn-back{
     position: absolute;
@@ -16,4 +20,100 @@
       cursor: pointer;
     }
   }
+}
+.workplace-toolbar{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 300px;
+  width: 60px;
+  .item{
+    width: 60px;
+    height: 60px;
+    border: 1px solid $gray-light;
+    span{
+      height: 25px;
+      width: 25px;
+      font-size: 25px;
+      @include absolute-center;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    &:hover{
+      cursor: pointer;
+    }
+    &.activated{
+      background: $gray;
+      color: lighten($brand-info, 15%);
+    }
+  }
+  .submenu{
+    position: absolute;
+    right: 60px;
+    height: 60px;
+    top: -1px;
+    padding-left: 0;
+    display: inline-flex;
+    .item{
+      float: right;
+      position: relative;
+    }
+  }
+}
+.workplace-toolbar{
+  background-color: white;
+  z-index: 1501;
+  
+  .submenu{
+    z-index: 1500;
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+    transform: translatex(60px); 
+    opacity: 0;
+    &.open{
+      transform: translatex(1px);
+      opacity: 1;
+    }
+  }
+
+}
+#photo-dialog{
+  width: 382px;
+  height: 100px;
+  background-color: white;
+  border-radius: 4px;
+  @include absolute-center; 
+  @include drop-shadow;
+
+  button{
+    float: left;
+    margin: 0 15px;
+  }
+}
+
+.photoPOI{
+  color: $brand-info;
+  cursor: default;
+  font-size: 20px;
+}
+.note{
+  @include absolute-center;
+  width: 200px;
+  height: 200px;
+  span{
+    color: white;
+    font-size: 80px;
+    width: 80px;
+    margin-bottom: 15px;
+    @include center-block;
+  }
+  background-color: rgba(0,0,0,0.8);
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
 }

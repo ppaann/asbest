@@ -5,6 +5,10 @@ var asbest = angular.module('asbest', ['ngRoute','ngAnimate', 'ui.bootstrap']);
 asbest.config(['$routeProvider', function($routeProvider){
   $routeProvider.
     when('/', {
+      templateUrl: 'app/templates/dashboard.html',
+      controller: ""
+    }).
+    when('/projects', {
       templateUrl: 'app/templates/allProjects.html',
       controller: "projectsController"
     }).
@@ -23,4 +27,5 @@ asbest.config(['$routeProvider', function($routeProvider){
     otherwise ({
       redirectTo: '/'
     });
+    console.log('log');
 }]);

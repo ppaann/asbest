@@ -1,14 +1,24 @@
-#floorplans{
-    .floorplan-thumbnali{
-        img{
-            padding: 20px;
-            width: 200px;
-            height: 150px;
+#projectDetail{
+    .top-bar{
+        #btn-nav-back{
+            margin: 8px 15px 0px 30px;
+        }
+        h2{
+            margin-top: 9px;
         }
     }
-    .image{
-        img{
-            margin: 20px;
+    #floorplans{
+        .floorplan-thumbnali{
+            img{
+                padding: 20px;
+                width: 200px;
+                height: 150px;
+            }
+        }
+        .image{
+            img{
+                margin: 20px;
+            }
         }
     }
 }

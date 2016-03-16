@@ -2,8 +2,38 @@
 
 asbest.controller('mainNaviController',
   function mainNaviController($scope,$route, projectData){
+    self = this;
     $scope.menuOpen = false;
-    $scope.projects = projectData.getAllProjects();
+    self.currentUrl = 
+
+    $scope.homeNaviItems = [
+    {
+      'name': 'DashBoard',
+      'id': 'dashBoard',
+      'url': '#/'
+    },{
+      'name': 'Projects',
+      'id': 'projects',
+      'url': '#/projects/'
+    },{
+      'name': 'Schedual',
+      'id': 'schedual',
+      'url': '#/schedual/'
+    },{
+      'name': 'Photos',
+      'id': 'photos',
+      'url': '#/photos/'
+    },{
+      'name': 'Logs',
+      'id': 'logs',
+      'url': '#/logs/'
+    }
+    ];
+
+    self.projects = projectData.getAllProjects();
+
+
+
 
     $scope.toggleMenu = function(){
       $scope.menuOpen = !$scope.menuOpen;

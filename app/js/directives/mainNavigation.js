@@ -5,7 +5,9 @@
     angular.module('asbest').directive('mainNavigation', function (){
         return {
             restrict: 'E',
-            templateUrl: 'app/js/directives/mainNavigation.html'
+            replace: true,
+            templateUrl: 'app/js/directives/mainNavigation.html',
+            controller: 'mainNaviController',
         }
 
     });

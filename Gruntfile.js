@@ -87,33 +87,33 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      options: {
+        interrupt: true,
+      },
       grunt: {
         options: {
           reload: true
         },
         files: ['Gruntfile.js']
       },
-
       compass: {
         files: ['styles/scss/**/*.scss'],
         tasks: ['compass:dev']
       },
-
       includeSource: {
         files: 'app/js/**/*.js',
         tasks: ['includeSource'],
         options: {
-          event: ['add', 'deleted']
+          event: ['added', 'deleted']
         }
       }
-
-
     },
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  //grunt.loadNpmTasks('grunt-contrib-jshint');
 
   grunt.loadNpmTasks('grunt-bower-install');  // add bower component to html
   grunt.loadNpmTasks('main-bower-files');     // copy bower main files to dist folder
@@ -122,6 +122,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dist', ['clean:build', 'bower:dist', 'includeSource', 'compass:dist', 'copy:dist']);
   grunt.registerTask('build', ['clean:build', 'compass:dev', 'includeSource', 'bower:dist',]);
-  grunt.registerTask('watch', ['watch']);
   grunt.registerTask('default', ['watch']);
 };

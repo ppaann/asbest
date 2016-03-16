@@ -1,3 +1,8 @@
+<div id="navigation-container">
+<button id="btn-main-menu" class="btn btn-default" ng-class="{'menuOpen': menuOpen}" type="button" ng-click="toggleMenu()">
+    <span class="glyphicon" ng-class="menuOpen ? 'glyphicon-arrow-left' : 'glyphicon-menu-hamburger'"></span>
+</button>
+
 <nav id="navigation" ng-class="{'menu-open': menuOpen}">
     <div id="main-navi-head">
         <a href="#/"><h3>Arto's projects</h3></a>
@@ -5,19 +10,21 @@
     <div id="main-navi-content">
         <ul class="nav nav-pills nav-stacked ">
             <li role="separator" class="divider"></li>
-            <li  ng-class="isCurrentRoute(project.id)" ng-repeat= "project in projects">
-              <a href="#/project/{{project.id}}">{{project.name}}</a>
-              <ul class="nav nav-pills nav-stacked sub-menu">
-                <li ng-class="isCurrentRoute(project.id, plan.id)" ng-repeat="plan in project.floorplans">
+            <li  ng-class="isCurrentRoute(item.id)" ng-repeat= "item in homeNaviItems">
+              <a href="{{item.url}}">{{item.name}}</a>
+              <!-- <a href="#/project/{{project.id}}">{{project.name}}</a>
+                  <ul class="nav nav-pills nav-stacked sub-menu">
+                    <li ng-class="isCurrentRoute(project.id, plan.id)" ng-repeat="plan in project.floorplans">
 
-                  <a href="#/project/{{project.id}}/{{plan.id}}">{{plan.id}} {{plan.name}}</a>
-                </li>
-              </ul>
-              <ul class="nav nav-pill nav-stacked">
-                  <li><a href="#">Isännöiitsijäntodistus</a></li>
-                  <li><a href="#">Quotation</a></li>
-                  <li><a href="#">Asuntotaulukko</a></li>
-              </ul>
+                      <a href="#/project/{{project.id}}/{{plan.id}}">{{plan.id}} {{plan.name}}</a>
+                    </li>
+                  </ul>
+                  <ul class="nav nav-pill nav-stacked">
+                      <li><a href="#">Isännöiitsijäntodistus</a></li>
+                      <li><a href="#">Quotation</a></li>
+                      <li><a href="#">Asuntotaulukko</a></li>
+                  </ul>
+             -->
             </li>
         </ul>
     </div>
@@ -29,3 +36,4 @@
       </ul>
     </div>
 </nav>
+</div>
