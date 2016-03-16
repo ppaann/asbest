@@ -1,0 +1,11 @@
+<div id="top-navigation" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <nav class="nav navbar-nav">
+      <li ng-repeat = 'item in items'>
+        <a ng-if="item.url != ''" href="{{item.url}}">{{item.name}}<span  class="glyphicon glyphicon-chevron-right"></span></a>
+        <span ng-if="item.url === ''" class="navbar-text">{{item.name}}</span>
+
+      </li>
+    </nav>
+  </div>
+</div>
