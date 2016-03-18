@@ -17,8 +17,7 @@ asbest.config(['$routeProvider', function($routeProvider){
       controller: "projectDetailController"
     }).
     when('/project/:projectId/:floorplan', {
-      templateUrl: 'app/templates/workspace.html',
-      controller: "workspaceController"
+      templateUrl: 'app/templates/projectWorkspace.html',
     }).
     when('/project/mockup/modelInspection', {
       templateUrl: 'app/templates/modelInspection.html',

@@ -23,7 +23,7 @@
 }
 .workplace-toolbar{
   position: absolute;
-  right: 0;
+  right: 20px;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -33,6 +33,7 @@
     width: 60px;
     height: 60px;
     border: 1px solid $gray-light;
+    background-color: white;
     span{
       height: 25px;
       width: 25px;
@@ -95,12 +96,11 @@
 }
 
 .photoPOI{
-  color: $brand-info;
+  color: darken($brand-info, 10%);
   cursor: default;
   font-size: 20px;
 }
 .note{
-  @include absolute-center;
   width: 200px;
   height: 200px;
   span{
@@ -116,4 +116,14 @@
   padding: 10px;
   text-align: center;
   border-radius: 4px;
+}
+#sampleDialog{
+  width: 400px;
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  right: 20px;
+  background: $gray-lighter;
+  border: 1px solid $gray-light;
+  
 }
