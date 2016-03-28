@@ -2,7 +2,8 @@
 
 var asbest = angular.module('asbest', ['ngRoute','ngAnimate', 'ui.bootstrap']);
 
-asbest.config(['$routeProvider', function($routeProvider){
+asbest.config(['$routeProvider', '$locationProvider', 
+  function($routeProvider,  $locationProvider){
   $routeProvider.
     when('/', {
       templateUrl: 'app/templates/dashboard.html',
@@ -23,8 +24,11 @@ asbest.config(['$routeProvider', function($routeProvider){
       templateUrl: 'app/templates/modelInspection.html',
       controller: "modelInspectionController"
     }).
+    when('/404', {
+      templateUrl: '404.html',
+    }).
     otherwise ({
-      redirectTo: '/'
+      redirectTo: '/404'
     });
-    console.log('log');
+    $locationProvider.html5Mode(true);
 }]);

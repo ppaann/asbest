@@ -28,6 +28,22 @@ module.exports = function(grunt) {
     clean: {
       build: ['dist']
     },
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          base: '',
+          middleware: function(connect, options, middlewares) {
+            var modRewrite = require('connect-modrewrite');
+
+            // enable Angular's HTML5 mode
+            middlewares.unshift(modRewrite(['!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.jpg|\\.ttf|\\.woff|\\.woff2$ /index.html [L]']));
+
+            return middlewares;
+          }
+        }
+      }
+    },
     compass: {
       options: {
         importPath:['bower_components/bootstrap-sass/assets/stylesheets'],
@@ -113,6 +129,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   //grunt.loadNpmTasks('grunt-contrib-jshint');
 
   grunt.loadNpmTasks('grunt-bower-install');  // add bower component to html
@@ -122,5 +139,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dist', ['clean:build', 'bower:dist', 'includeSource', 'compass:dist', 'copy:dist']);
   grunt.registerTask('build', ['clean:build', 'compass:dev', 'includeSource', 'bower:dist',]);
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['connect', 'watch']);
 };

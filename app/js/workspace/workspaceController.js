@@ -60,11 +60,11 @@ asbest.controller('workspaceController', function($scope, $routeParams, $uibModa
 
         if(e.data.ele === 'photoIcon-temp'){
             $scope.showPhotoDialog = true;
-            var photoicon = '<span id="photoIcon-temp" style="position: absolute; top: '+e.pageY+'px; left: '+e.pageX+'px;" class="photoPOI glyphicon glyphicon-camera"></span>';
+            var photoicon = '<span id="photoIcon-temp" style="position: absolute; top: '+e.pageY+'px; left: '+e.pageX+'px;" class="POI glyphicon glyphicon-camera"></span>';
             workspace.after(photoicon);
         }
         else if(e.data.ele = 'sampleIcon-temp'){
-            var sampleicon = '<span id="sampleIcon-temp" style="position: absolute; top: '+e.pageY+'px; left: '+e.pageX+'px;" class="photoPOI glyphicon glyphicon-filter"></span>';
+            var sampleicon = '<span id="sampleIcon-temp" style="position: absolute; top: '+e.pageY+'px; left: '+e.pageX+'px;" class="POI glyphicon glyphicon-filter"></span>';
             workspace.after(sampleicon);
             self.openSampleDialog();
         }

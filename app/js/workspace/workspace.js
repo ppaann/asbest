@@ -12,8 +12,11 @@
             link: function(scope, el, attr){
               console.log(scope);
               $("#sampleDialogContent").mmenu({
-                        offCanvas: false
-                    });
+                  offCanvas: false,
+                  navbar: {
+                    title: 'Sample'
+                  }
+              });
             }
         }
 
