@@ -608,7 +608,7 @@
 						//	Open/Close panel
 						if ( !fired && inMenu )
 						{
-							if ( _h.length > 1 && _h.slice( 0, 1 ) == '#' )
+							if ( _h.length > 1 && _h.slice( 0, 1 ) == '#' && _h.slice( 0, 2 ) !== '#/' )
 							{
 								try
 								{
@@ -642,7 +642,7 @@
 								}
 	
 								//	Prevent default / don't follow link. Default: false
-								var preventDefault = that.__valueOrFn( that.opts.onClick.preventDefault, $t, _h.slice( 0, 1 ) == '#' );
+								var preventDefault = that.__valueOrFn( that.opts.onClick.preventDefault, $t, (_h.slice( 0, 1 ) == '#' && _h.slice( 0, 2 ) !== '#/') );
 								if ( preventDefault )
 								{
 									e.preventDefault();

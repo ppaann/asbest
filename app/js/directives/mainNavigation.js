@@ -2,16 +2,18 @@
 
     'use strict';
 
-    angular.module('asbest').directive('mainNavigation', function (){
+    angular.module('asbest').directive('mainNavigation', function ($timeout){
         return {
             restrict: 'E',
             replace: true,
             templateUrl: 'app/js/directives/mainNavigation.html',
             controller: 'mainNaviController',
             link : function(scope, element, attrs) {
-              $(element).mmenu({});
+                $timeout(function(){
+                    $(element).mmenu({});
+                }, 0);
+              
             }
         }
-
     });
 })();

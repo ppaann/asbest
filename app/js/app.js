@@ -30,5 +30,4 @@ asbest.config(['$routeProvider', '$locationProvider',
     otherwise ({
       redirectTo: '/404'
     });
-    $locationProvider.html5Mode(true);
 }]);

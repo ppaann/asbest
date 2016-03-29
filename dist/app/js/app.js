@@ -2,7 +2,8 @@
 
 var asbest = angular.module('asbest', ['ngRoute','ngAnimate', 'ui.bootstrap']);
 
-asbest.config(['$routeProvider', function($routeProvider){
+asbest.config(['$routeProvider', '$locationProvider', 
+  function($routeProvider,  $locationProvider){
   $routeProvider.
     when('/', {
       templateUrl: 'app/templates/dashboard.html',
@@ -17,15 +18,16 @@ asbest.config(['$routeProvider', function($routeProvider){
       controller: "projectDetailController"
     }).
     when('/project/:projectId/:floorplan', {
-      templateUrl: 'app/templates/workspace.html',
-      controller: "workspaceController"
+      templateUrl: 'app/templates/projectWorkspace.html',
     }).
     when('/project/mockup/modelInspection', {
       templateUrl: 'app/templates/modelInspection.html',
       controller: "modelInspectionController"
     }).
+    when('/404', {
+      templateUrl: '404.html',
+    }).
     otherwise ({
-      redirectTo: '/'
+      redirectTo: '/404'
     });
-    console.log('log');
 }]);

@@ -1,5 +1,3 @@
-
-<top-navigation></top-navigation>
 <div class="workspace">
   <div class="container-fluid">
       <div id="floorplan" >
@@ -17,23 +15,53 @@
     </ul>
   </div> -->
 
-<div class="workplace-toolbar">
-  <ul class="vertical-menu nav nav-pills nav-stacked">
-    <li class="item" ng-click = "openSubmenu($event)"><span>PO</span>
-      <ul class="submenu">
-        <li class="item actived"><span>PO</span></li>
-        <li class="item"><span>MO</span></li>
-      </ul>
-    </li>
-    <li class="item"><span class="glyphicon glyphicon-filter"></span></li>
-    <li class="item" 
-        ng-class="{'activated': photoActivated}"
-        ng-click = "takePhoto()">
-        <span class="glyphicon glyphicon-camera"></span></li>
-    <li class="item"><span class="glyphicon glyphicon-list-alt"></span></li>
-    <li class="item"><span class="glyphicon glyphicon-arrow-down"></span></li>
-  </ul>
+  <div class="workplace-toolbar">
+    <ul class="vertical-menu nav nav-pills nav-stacked">
+      <li class="item" ng-click = "openSubmenu($event)"><span class="glyphicon glyphicon-registration-mark"></span>
+        <ul class="submenu">
+          <li class="item actived"><span>PO</span></li>
+          <li class="item"><span>MO</span></li>
+        </ul>
+      </li>
+      <li class="item"
+          ng-class="{'activated': sampleActivated}"
+          uib-popover-html = "wsCtrl.popover.sample"
+          popover-placement = "left"
+          popover-trigger = "outsideClick"
+          ng-click = "takeSample()"><span class="glyphicon glyphicon-filter"></span></li>
+      <li class="item" 
+          ng-class="{'activated': photoActivated}"
+          uib-popover-html = "wsCtrl.popover.photo"
+          popover-placement = "left"
+          popover-trigger = "outsideClick"
+          ng-click = "takePhoto()">
+          <span class="glyphicon glyphicon-camera"></span></li>
+      <li class="item"><span class="glyphicon glyphicon-list-alt"></span></li>
+      <li class="item"><span class="glyphicon glyphicon-arrow-down"></span></li>
+    </ul>
+  </div>
 </div>
+
+<div id="sampleDialog">
+
+  <div class="Divider"><h2>Sample</h2></div>
+  <nav id="sampleDialogContent">
+   <ul>
+      <li class="Divider"><span>Add Photo</span></li>
+      <li><a href="">Sample Id: </a>
+         <ul>
+            <li><a href="/about/history/">History</a></li>
+            <li><a href="/about/team/">The team</a></li>
+            <li><a href="/about/address/">Our address</a></li>
+         </ul>
+      </li>
+      <li><a href="">Room</a></li>
+      <li><a href="">Test Type</a></li>
+      <li><a href="">Class</a></li>
+      <li><input type="textarea" placeholder="description"></li>
+      <li><button class="btn btn-default">Remove Sample</button></li>
+    </ul>
+  </nav>
 </div>
 
 <div id="photo-dialog" class="container dialog" ng-show="showPhotoDialog">
@@ -92,3 +120,4 @@
       <button id="btn-cancel" class="btn btn-warning" type="button" ng-click="cancel()"> cancel </button>
   </div>
 </div>
+

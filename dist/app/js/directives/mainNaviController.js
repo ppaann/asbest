@@ -14,7 +14,8 @@ asbest.controller('mainNaviController',
     },{
       'name': 'Projects',
       'id': 'projects',
-      'url': '#/projects/'
+      'url': '#/projects/',
+      'subItem': ['1', '2', '3']
     },{
       'name': 'Schedual',
       'id': 'schedual',

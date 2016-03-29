@@ -33,14 +33,14 @@ module.exports = function(grunt) {
         options: {
           port: 9001,
           base: '',
-          middleware: function(connect, options, middlewares) {
-            var modRewrite = require('connect-modrewrite');
+          // middleware: function(connect, options, middlewares) {
+          //   var modRewrite = require('connect-modrewrite');
 
-            // enable Angular's HTML5 mode
-            middlewares.unshift(modRewrite(['!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.jpg|\\.ttf|\\.woff|\\.woff2$ /index.html [L]']));
+          //   // enable Angular's HTML5 mode
+          //   middlewares.unshift(modRewrite(['!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.jpg|\\.ttf|\\.woff|\\.woff2$ /index.html [L]']));
 
-            return middlewares;
-          }
+          //   return middlewares;
+          // }
         }
       }
     },
@@ -86,7 +86,16 @@ module.exports = function(grunt) {
           flatten: true,
           dot: true,
           dest: 'dist/styles/fonts',
-        }]
+        },
+        {
+          src: 'libs/jQuery.mmenu-master/dist/js/jquery.mmenu.all.min.js',
+          dest: 'dist/'
+        },
+        {
+          src: 'libs/jQuery.mmenu-master/dist/css/jquery.mmenu.css',
+          dest: 'dist/'
+        },
+        ]
       },
     },
 

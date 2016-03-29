@@ -1,13 +1,16 @@
 
 
 <nav id="navigation-menu" >
-        <ul class="nav nav-pills nav-stacked ">
-            <li role="separator" class="divider"></li>
-            <li  ng-class="isCurrentRoute(item.id)" ng-repeat= "item in homeNaviItems">
-              <a ng-href="{{item.url}}">{{item.name}}</a>
-            </li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#/projects">Settings</a></li>
-          <li><a href="/projects">Feedback</a></li>
-      </ul>
+  <ul class="nav nav-pills nav-stacked ">
+      <li role="separator" class="divider"></li>
+      <li  ng-class="isCurrentRoute(item.id)" ng-repeat= "item in homeNaviItems">
+        <a ng-href="{{item.url}}">{{item.name}}</a>
+        <ul ng-if="item.subItem" ng-repeat="subItem in item.subItem">
+          <li><a href="#/"+'subItem'>subItem</a></li>
+        </ul>
+      </li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#/settings">Settings</a></li>
+    <li><a href="#/feedback">Feedback</a></li>
+</ul>
 </nav>
