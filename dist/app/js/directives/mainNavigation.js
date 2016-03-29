@@ -8,6 +8,9 @@
             replace: true,
             templateUrl: 'app/js/directives/mainNavigation.html',
             controller: 'mainNaviController',
+            link : function(scope, element, attrs) {
+              $(element).mmenu({});
+            }
         }
 
     });

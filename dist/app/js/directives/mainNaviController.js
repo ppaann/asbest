@@ -10,23 +10,23 @@ asbest.controller('mainNaviController',
     {
       'name': 'DashBoard',
       'id': 'dashBoard',
-      'url': '#/'
+      'url': '/'
     },{
       'name': 'Projects',
       'id': 'projects',
-      'url': '#/projects/'
+      'url': 'projects/'
     },{
       'name': 'Schedual',
       'id': 'schedual',
-      'url': '#/schedual/'
+      'url': 'schedual/'
     },{
       'name': 'Photos',
       'id': 'photos',
-      'url': '#/photos/'
+      'url': 'photos/'
     },{
       'name': 'Logs',
       'id': 'logs',
-      'url': '#/logs/'
+      'url': 'logs/'
     }
     ];
 
