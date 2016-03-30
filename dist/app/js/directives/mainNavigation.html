@@ -6,7 +6,7 @@
       <li  ng-class="isCurrentRoute(item.id)" ng-repeat= "item in homeNaviItems">
         <a ng-href="{{item.url}}">{{item.name}}</a>
         <ul ng-if="item.subItem" ng-repeat="subItem in item.subItem">
-          <li><a href="#/"+'subItem'>subItem</a></li>
+          <li><a href='/subItem'>subItem</a></li>
         </ul>
       </li>
     <li role="separator" class="divider"></li>

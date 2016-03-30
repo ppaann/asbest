@@ -7,7 +7,7 @@ asbest.config(['$routeProvider', '$locationProvider',
   $routeProvider.
     when('/', {
       templateUrl: 'app/templates/dashboard.html',
-      controller: ""
+      controller: "dashboardController"
     }).
     when('/projects', {
       templateUrl: 'app/templates/allProjects.html',
@@ -19,6 +19,8 @@ asbest.config(['$routeProvider', '$locationProvider',
     }).
     when('/project/:projectId/:floorplan', {
       templateUrl: 'app/templates/projectWorkspace.html',
+      controller: 'projectWorkspaceController',
+      controllerAs: 'projectWorkspaceCtrl'
     }).
     when('/project/mockup/modelInspection', {
       templateUrl: 'app/templates/modelInspection.html',

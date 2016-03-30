@@ -7,7 +7,6 @@
             restrict: 'E',
             replace: true,
             templateUrl: 'app/js/directives/topNavigation.html',
-            controller: 'topNavigationController',
         }
 
     });

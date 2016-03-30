@@ -7276,6 +7276,9 @@ body {
   body #main-container {
     position: relative;
     overflow-x: hidden; }
+  /* line 15, scss/_layout.scss */
+  body #top-navigation + div {
+    margin-top: 70px !important; }
 
 /* line 1, scss/_menu.scss */
 #btn-main-menu {
@@ -7516,6 +7519,10 @@ a.project-link {
   right: 20px;
   background: #eeeeee;
   border: 1px solid #777777; }
+
+/* line 130, scss/_workspace.scss */
+#sampleDialogContent {
+  width: 100%; }
 
 /* line 1, scss/_dialog.scss */
 .dialog .close {

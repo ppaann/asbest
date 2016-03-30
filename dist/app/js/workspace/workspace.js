@@ -10,7 +10,6 @@
             controller: "workspaceController",
             controllerAs: 'wsCtrl',
             link: function(scope, el, attr){
-              console.log(scope);
               $("#sampleDialogContent").mmenu({
                   offCanvas: false,
                   navbar: {

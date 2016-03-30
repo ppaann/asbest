@@ -11,7 +11,12 @@ body{
     position: relative;
     overflow-x: hidden;
   }
+
+  #top-navigation + div {
+    margin-top: 70px !important;
+  }
 }
+
 
 @media screen and (min-device-width: 768px){
 
