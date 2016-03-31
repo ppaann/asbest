@@ -42,7 +42,8 @@
   </div>
 </div>
 
-<div id="sampleDialog">
+<div id="sampleDialog" ng-show="sampleActivated">
+  <button class="btn btn-default btn-close" ng-click="sampleActivated = false;">Done</button>
   <nav id="sampleDialogMenu">
     <div id="app">
       <ul>
@@ -73,6 +74,10 @@
             <em class="Counter">-</em>
             <a href="#option-amount" class="mm-arrow">Määrä</a>
           </li>
+          <li id="unit">
+            <em class="Counter">m</em>
+            <a href="#option-unit" class="mm-arrow">Mittayksikkö</a>
+          </li>
       </ul>
       <div id="option-place" class="Panel">
         <ul>
@@ -97,6 +102,15 @@
               <li><span>1</span></li>
               <li><span>2</span></li>
               <li><span>3</span></li>
+        </ul>
+      </div>
+      <div id="option-unit" class="Panel">
+        <ul>
+          <li class="Divider"><button class="btn btn-default">Add New</button></li>
+              <li><span>m</span></li>
+              <li><span>m2</span></li>
+              <li><span>m3</span></li>
+              <li><span>kpl</span></li>
         </ul>
       </div>
     </div>

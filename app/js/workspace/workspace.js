@@ -33,13 +33,24 @@
 
                 var api = $("#sampleDialogMenu").data( "mmenu" );
 
-                //  Choose location
-                var $set_location = $("#setting-location .mm-counter");
-                $("#locations").find( "li span" ).click(function() {
+                //  Choose place
+                var $set_location = $("#place .mm-counter");
+                $("#option-place").find( "li span" ).click(function() {
                   $set_location.text( $(this).text() );
                   api.openPanel( $settings );
                 });
-
+                //  Choose product
+                var $set_product = $("#product .mm-counter");
+                $("#option-product").find( "li span" ).click(function() {
+                  $set_product.text( $(this).text() );
+                  api.openPanel( $settings );
+                });
+                //  Choose amount
+                var $set_amount = $("#amount .mm-counter");
+                $("#option-amount").find( "li span" ).click(function() {
+                  $set_amount.text( $(this).text() );
+                  api.openPanel( $settings );
+                });
               });
       
             }

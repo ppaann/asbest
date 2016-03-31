@@ -18,6 +18,7 @@ asbest.controller('workspaceController', function($scope, $routeParams, $uibModa
     $scope.showPhotoDialog = false;
     $scope.photoActivated = false;
     $scope.sampleActivated = false;
+    $scope.showSampleDialog = false;
 
 
 
@@ -70,7 +71,7 @@ asbest.controller('workspaceController', function($scope, $routeParams, $uibModa
         }
     }
     self.openSampleDialog = function(){
-        
+        $scope.showSampleDialog = true;
     }
 
     $scope.takePhoto = function($event){
