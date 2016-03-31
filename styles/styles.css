@@ -7516,13 +7516,20 @@ a.project-link {
   position: absolute;
   top: 60px;
   bottom: 60px;
-  right: 20px;
+  right: 100px;
   background: #eeeeee;
   border: 1px solid #777777; }
 
 /* line 130, scss/_workspace.scss */
-#sampleDialogContent {
+#sampleDialogMenu {
   width: 100%; }
+  /* line 132, scss/_workspace.scss */
+  #sampleDialogMenu .mm-panels {
+    width: 100%; }
+  /* line 135, scss/_workspace.scss */
+  #sampleDialogMenu .mm-title,
+  #sampleDialogMenu .mm-counter {
+    color: #f90 !important; }
 
 /* line 1, scss/_dialog.scss */
 .dialog .close {

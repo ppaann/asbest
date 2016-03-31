@@ -122,11 +122,19 @@
   position: absolute;
   top: 60px;
   bottom: 60px;
-  right: 20px;
+  right: 100px;
   background: $gray-lighter;
   border: 1px solid $gray-light;
   
 }
-#sampleDialogContent{
+#sampleDialogMenu{
   width: 100%;
+  .mm-panels{
+    width: 100%;
+  }
+  .mm-title,
+  .mm-counter
+  {
+    color: #f90 !important;
+  }
 }
