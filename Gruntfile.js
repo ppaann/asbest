@@ -92,7 +92,7 @@ module.exports = function(grunt) {
           dest: 'dist/'
         },
         {
-          src: 'libs/jQuery.mmenu-master/dist/css/jquery.mmenu.css',
+          src: 'libs/jQuery.mmenu-master/dist/css/jquery.mmenu.all.css',
           dest: 'dist/'
         },
         ]

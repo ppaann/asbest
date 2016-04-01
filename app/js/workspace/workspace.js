@@ -51,6 +51,12 @@
                   $set_amount.text( $(this).text() );
                   api.openPanel( $settings );
                 });
+                //  Choose amount
+                var $set_unit = $("#unit .mm-counter");
+                $("#option-unit").find( "li span" ).click(function() {
+                  $set_unit.text( $(this).text() );
+                  api.openPanel( $settings );
+                });
               });
       
             }

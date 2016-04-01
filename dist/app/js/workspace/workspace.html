@@ -42,26 +42,79 @@
   </div>
 </div>
 
-<div id="sampleDialog">
-
-  <div class="Divider"><h2>Sample</h2></div>
-  <nav id="sampleDialogContent">
-   <ul>
-      <li class="Divider"><span>Add Photo</span></li>
-      <li><a href="">Sample Id: </a>
-         <ul>
-            <li><a href="/about/history/">History</a></li>
-            <li><a href="/about/team/">The team</a></li>
-            <li><a href="/about/address/">Our address</a></li>
-         </ul>
-      </li>
-      <li><a href="">Room</a></li>
-      <li><a href="">Test Type</a></li>
-      <li><a href="">Class</a></li>
-      <li><input type="textarea" placeholder="description"></li>
-      <li><button class="btn btn-default">Remove Sample</button></li>
-    </ul>
-  </nav>
+<div id="sampleDialog" ng-show="showSampleDialog">
+  <button class="btn btn-default btn-close" ng-click="showSampleDialog = false;">Done</button>
+  <nav id="sampleDialogMenu">
+    <div id="app">
+      <ul>
+        <li class="Divider"> <button class="btn btn-default">Take Photo</button></li>
+        <li class="Divider Spacer"><span>Sijainti</span></li>
+          <li>
+            <em class="Counter">001</em>
+            <span>Id</span>
+          </li>
+          <li>
+            <em class="Counter">Talo A+</em>
+            <a href="#building-floor">Rakannus Ja Kerros</a>
+          </li>
+          <li>
+            <em class="Counter">jalkisivu</em>
+            <a href="#room">Huone</a>
+          </li>
+        <li class="Divider Spacer"><span>Sample</span></li>
+          <li id="place">
+            <em class="Counter">L</em>
+            <a href="#option-place" class="mm-arrow">Paikka</a>
+          </li>
+          <li id="product">
+            <em class="Counter">PE</em>
+            <a href="#option-product" class="mm-arrow">Tuote</a>
+          </li>
+          <li id="amount">
+            <em class="Counter">-</em>
+            <a href="#option-amount" class="mm-arrow">Määrä</a>
+          </li>
+          <li id="unit">
+            <em class="Counter">m</em>
+            <a href="#option-unit" class="mm-arrow">Mittayksikkö</a>
+          </li>
+      </ul>
+      <div id="option-place" class="Panel">
+        <ul>
+          <li class="Divider"><button class="btn btn-default">Add New</button></li>
+              <li><span>L - lattia</span></li>
+              <li><span>S - seinä</span></li>
+              <li><span>k - katto</span></li>
+        </ul>
+      </div>
+      <div id="option-product" class="Panel">
+        <ul>
+          <li class="Divider"><button class="btn btn-default">Add New</button></li>
+              <li><span>PE - puki eriste</span></li>
+              <li><span>P - lattian pikailiima</span></li>
+              <li><span>FF - Lattian vinyylilaatta</span></li>
+              <li><span>PO - palo ovi</span></li>
+        </ul>
+      </div>
+      <div id="option-amount" class="Panel">
+        <ul>
+          <li class="Divider"><button class="btn btn-default">Add New</button></li>
+              <li><span>1</span></li>
+              <li><span>2</span></li>
+              <li><span>3</span></li>
+        </ul>
+      </div>
+      <div id="option-unit" class="Panel">
+        <ul>
+          <li class="Divider"><button class="btn btn-default">Add New</button></li>
+              <li><span>m</span></li>
+              <li><span>m2</span></li>
+              <li><span>m3</span></li>
+              <li><span>kpl</span></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
 </div>
 
 <div id="photo-dialog" class="container dialog" ng-show="showPhotoDialog">
