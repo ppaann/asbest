@@ -4,9 +4,29 @@ asbest.controller('workspaceController', function($scope, $routeParams, $uibModa
     self= this;
     self.photoId = 0;
     self.popover = {
-        photo: $sce.trustAsHtml('<div class="note takePhoto"><span class="glyphicon glyphicon-camera"></span>Type on where the photo is taken</div>'),
-        sample: $sce.trustAsHtml('<div class="note takeSample"><span class="glyphicon glyphicon-filter"></span>Type on where the sample is taken</div>'),
+        photo: $sce.trustAsHtml('<div class="note takePhoto"><span class="glyphicon glyphicon-camera"></span>Type on the photo location</div>'),
+        sample: $sce.trustAsHtml('<div class="note takeSample"><span class="glyphicon glyphicon-filter"></span>Type on the sample location</div>'),
     }
+    self.poiData = [
+        {
+            'name': 'PO',
+            'description': 'Palo ovi'
+        },{
+            'name': 'PE',
+            'description': 'Putki eriste'
+        },{
+            'name': 'P',
+            'description': 'Lattian pikiliima'
+        },{
+            'name': 'FF',
+            'description': 'Lattian vinyylilatta'
+        },{
+            'name': 'ML',
+            'description': 'Magnesiamassalattia'
+        }
+    ];
+    self.currentPOI = self.poiData[0].name;
+
     var workspace = $('.workspace');
 
     $scope.floorplan = null;
@@ -19,33 +39,9 @@ asbest.controller('workspaceController', function($scope, $routeParams, $uibModa
     $scope.photoActivated = false;
     $scope.sampleActivated = false;
     $scope.showSampleDialog = false;
+    $scope.showPOIDialog = false;
+    $scope.poiActivated = false;
 
-
-
-    // $scope.onClickImage = function(e){
-    //   $(".context-menu").css('display', 'block').offset({top:e.offsetY, left:e.offsetX});
-    // }
-    // $scope.onInspection = function(){
-    //   $(".context-menu").css('display', 'none');
-    //   $("#poi_setting").addClass('open');
-
-    //   // var modalInstance = $uibModal.open({
-    //   //   animation: true,
-    //   //   windowClass: 'asbestDialog',
-    //   //   templateUrl: 'app/templates/modelInspection.html',
-    //   //   controller: 'modelInspectionController'
-    //   // });
-    // }
-    // $scope.onSample = function(){
-    //   $(".context-menu").css('display', 'none');
-    //   $("#poi_setting").addClass('open');
-    //   // var modalInstance = $uibModal.open({
-    //   //   animation: true,
-    //   //   windowClass: 'asbestDialog',
-    //   //   templateUrl: 'app/templates/modelSample.html',
-    //   //   controller: 'modelInspectionController'
-    //   // });
-    // }
 
     $scope.openSubmenu = function($event){
         $($event.currentTarget).find('.submenu').toggleClass('open');
@@ -56,22 +52,33 @@ asbest.controller('workspaceController', function($scope, $routeParams, $uibModa
         el.offset({top:e.pageY, left:e.pageX});
     }
     self.dropPOI = function(e){
+        console.log('drop');
         workspace.off('mouseup', self.dropPOI);
         $('.note').remove();
 
         if(e.data.ele === 'photoIcon-temp'){
+            var photoicon = '<span id="photoIcon-temp" style="position: absolute; top: '+e.pageY+'px; left: '+e.pageX+'px;" class="photoPOI glyphicon glyphicon-camera"></span>';
+            $scope.photoActivated = false;
             $scope.showPhotoDialog = true;
-            var photoicon = '<span id="photoIcon-temp" style="position: absolute; top: '+e.pageY+'px; left: '+e.pageX+'px;" class="POI glyphicon glyphicon-camera"></span>';
             workspace.after(photoicon);
         }
-        else if(e.data.ele = 'sampleIcon-temp'){
-            var sampleicon = '<span id="sampleIcon-temp" style="position: absolute; top: '+e.pageY+'px; left: '+e.pageX+'px;" class="POI glyphicon glyphicon-filter"></span>';
+        else if(e.data.ele === 'sampleIcon-temp'){
+            var sampleicon = '<span id="sampleIcon-temp" style="position: absolute; top: '+e.pageY+'px; left: '+e.pageX+'px;" class="samplePOI glyphicon glyphicon-filter"></span>';
+            $scope.sampleActivated = false;
+            $scope.showSampleDialog = true;
             workspace.after(sampleicon);
-            self.openSampleDialog();
+        }
+        else if(e.data.ele === 'poiIcon-temp'){
+            var poiIcon = '<span style="position: absolute; top: '+ e.pageY+'px; left: '+e.pageX+
+                            'px;"><div class="poi"><span class="content">'+
+                            self.currentPOI+'</span></div></span>';
+            $scope.poiActivated = false;
+            workspace.after(poiIcon);
         }
     }
-    self.openSampleDialog = function(){
-        $scope.showSampleDialog = true;
+    self.onDropPoi= function() {
+        $scope.showPOIDialog = false;
+        $scope.poiActivated = false;
     }
 
     $scope.takePhoto = function($event){
@@ -81,9 +88,16 @@ asbest.controller('workspaceController', function($scope, $routeParams, $uibModa
         workspace.on('mouseup',{ele: 'photoIcon-temp'}, self.dropPOI);
     }
     $scope.takeSample = function($event){
-        console.log('takePhoto');
+        console.log('takeSample');
         $scope.sampleActivated = true;
-
         workspace.on('mouseup',{ele: 'sampleIcon-temp'}, self.dropPOI);
+    }
+    $scope.onPOISelected = function() {
+        console.log('onPOISelected', this, this.item);
+        $scope.showPOIDialog = false;
+        $scope.poiActivated = true;
+        self.currentPOI = this.item.name;
+
+        workspace.on('mouseup',{ele: 'poiIcon-temp'}, self.dropPOI);
     }
 })

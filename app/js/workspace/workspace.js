@@ -58,7 +58,15 @@
                   api.openPanel( $settings );
                 });
               });
-      
+
+              $('#poi-dialog-menu').mmenu({
+                offCanvas : false,
+                extensions  : ["theme-white"],
+                navbar    : {
+                  title : "POI"
+                },
+                navbars   : true,
+              });
             }
         };
 

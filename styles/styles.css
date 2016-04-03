@@ -7417,7 +7417,7 @@ a.project-link {
     border: 1px solid #777777;
     background-color: white; }
     /* line 37, scss/_workspace.scss */
-    .workplace-toolbar .item span {
+    .workplace-toolbar .item .glyphicon {
       height: 25px;
       width: 25px;
       font-size: 25px;
@@ -7428,7 +7428,7 @@ a.project-link {
       left: 0;
       margin: auto; }
       /* line 42, scss/_workspace.scss */
-      .workplace-toolbar .item span:hover {
+      .workplace-toolbar .item .glyphicon:hover {
         cursor: pointer; }
     /* line 46, scss/_workspace.scss */
     .workplace-toolbar .item:hover {
@@ -7436,8 +7436,9 @@ a.project-link {
     /* line 49, scss/_workspace.scss */
     .workplace-toolbar .item.activated {
       background: #555555;
-      color: #9bd8eb; }
-  /* line 54, scss/_workspace.scss */
+      color: #9bd8eb;
+      z-index: 10; }
+  /* line 55, scss/_workspace.scss */
   .workplace-toolbar .submenu {
     position: absolute;
     right: 60px;
@@ -7445,30 +7446,30 @@ a.project-link {
     top: -1px;
     padding-left: 0;
     display: inline-flex; }
-    /* line 61, scss/_workspace.scss */
+    /* line 62, scss/_workspace.scss */
     .workplace-toolbar .submenu .item {
       float: right;
       position: relative; }
 
-/* line 67, scss/_workspace.scss */
+/* line 68, scss/_workspace.scss */
 .workplace-toolbar {
   background-color: white;
   z-index: 1501; }
-  /* line 71, scss/_workspace.scss */
+  /* line 72, scss/_workspace.scss */
   .workplace-toolbar .submenu {
     z-index: 1500;
     transition-duration: 0.3s;
     transition-property: transform, opacity;
     transform: translatex(60px);
     opacity: 0; }
-    /* line 77, scss/_workspace.scss */
+    /* line 78, scss/_workspace.scss */
     .workplace-toolbar .submenu.open {
       transform: translatex(1px);
       opacity: 1; }
 
-/* line 84, scss/_workspace.scss */
+/* line 85, scss/_workspace.scss */
 #photo-dialog {
-  width: 382px;
+  width: 390px;
   height: 100px;
   background-color: white;
   border-radius: 4px;
@@ -7479,38 +7480,46 @@ a.project-link {
   left: 0;
   margin: auto;
   box-shadow: 0 18px 20px 10px #777777; }
-  /* line 92, scss/_workspace.scss */
+  /* line 93, scss/_workspace.scss */
   #photo-dialog button {
     float: left;
     margin: 0 15px; }
 
-/* line 98, scss/_workspace.scss */
+/* line 99, scss/_workspace.scss */
+.samplePOI,
 .photoPOI {
-  color: #31b0d5;
   cursor: default;
-  font-size: 20px; }
+  font-size: 24px; }
 
-/* line 103, scss/_workspace.scss */
+/* line 104, scss/_workspace.scss */
+.samplePOI {
+  color: #d9534f; }
+
+/* line 107, scss/_workspace.scss */
+.photoPOI {
+  color: #8A10F6; }
+
+/* line 110, scss/_workspace.scss */
 .note {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 120px;
   background-color: rgba(0, 0, 0, 0.8);
-  font-size: 20px;
+  font-size: 16px;
   color: white;
   padding: 10px;
   text-align: center;
   border-radius: 4px; }
-  /* line 106, scss/_workspace.scss */
+  /* line 113, scss/_workspace.scss */
   .note span {
     color: white;
-    font-size: 80px;
-    width: 80px;
+    font-size: 40px;
+    width: 40px;
     margin-bottom: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto; }
 
-/* line 120, scss/_workspace.scss */
+/* line 127, scss/_workspace.scss */
 #sampleDialog {
   width: 400px;
   position: absolute;
@@ -7519,30 +7528,81 @@ a.project-link {
   right: 100px;
   background: #eeeeee;
   border: 1px solid #777777; }
-  /* line 129, scss/_workspace.scss */
+  /* line 136, scss/_workspace.scss */
   #sampleDialog .btn-close {
     z-index: 1;
     position: absolute;
     right: 12px;
     top: 3px; }
 
-/* line 137, scss/_workspace.scss */
+/* line 144, scss/_workspace.scss */
 #sampleDialogMenu {
   width: 100%; }
-  /* line 139, scss/_workspace.scss */
+  /* line 146, scss/_workspace.scss */
   #sampleDialogMenu .mm-panels {
     width: 100%; }
-  /* line 142, scss/_workspace.scss */
+  /* line 149, scss/_workspace.scss */
   #sampleDialogMenu .mm-title,
   #sampleDialogMenu .mm-counter {
     color: #f90 !important; }
-  /* line 147, scss/_workspace.scss */
+  /* line 154, scss/_workspace.scss */
   #sampleDialogMenu .parallel-menu {
     width: 50%;
     position: absolute;
     top: -20px;
     right: 0px;
     border-left: 1px solid #B5B5B5; }
+
+/* line 164, scss/_workspace.scss */
+.poi {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #5bc0de;
+  border-radius: 15px; }
+  /* line 170, scss/_workspace.scss */
+  .poi .content {
+    color: #31b0d5;
+    display: block;
+    font-size: 16px !important;
+    font-weight: bold;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase; }
+
+/* line 182, scss/_workspace.scss */
+#poi-dialog {
+  border: 1px solid gray;
+  height: 350px;
+  position: absolute;
+  right: 60px;
+  top: -1px;
+  width: 110px;
+  box-shadow: -10px 5px 15px 5px #777777;
+  z-index: -1; }
+  /* line 191, scss/_workspace.scss */
+  #poi-dialog #poi-dialog-menu {
+    width: 100%; }
+
+/* line 195, scss/_workspace.scss */
+.activated #menu-poi {
+  height: 58px;
+  box-shadow: 4px 3px 9px 4px #777777; }
+
+/* line 201, scss/_workspace.scss */
+#poi-dialog .mm-menu {
+  min-width: 0; }
+  /* line 203, scss/_workspace.scss */
+  #poi-dialog .mm-menu .divider-content {
+    padding-left: 5px; }
+  /* line 206, scss/_workspace.scss */
+  #poi-dialog .mm-menu .poi-list {
+    padding: 8px 0; }
 
 /* line 1, scss/_dialog.scss */
 .dialog .close {
