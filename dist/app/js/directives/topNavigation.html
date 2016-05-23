@@ -1,9 +1,0 @@
-<nav id="top-navigation" class="navbar navbar-default navbar-fixed-top">
-  <ul class="nav navbar-nav">
-    <li><a class = "glyphicon glyphicon-menu-hamburger" href="#navigation-menu"></a></li>
-    <li ng-repeat = 'item in topNaviItems'>
-      <a ng-if="item.url != ''" href="{{item.url}}">{{item.name}}<span  class="glyphicon glyphicon-chevron-right"></span></a>
-      <span ng-if="item.url === ''" class="navbar-text">{{item.name}}</span>
-    </li>
-  </ul>
-</nav>

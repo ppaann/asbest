@@ -6,7 +6,7 @@ asbest.config(['$routeProvider', '$locationProvider',
   function($routeProvider,  $locationProvider){
   $routeProvider.
     when('/', {
-      templateUrl: 'app/templates/dashboard.html',
+      templateUrl: 'app/modules/dashboard/dashboard.html',
       controller: "dashboardController"
     }).
     when('/projects', {
