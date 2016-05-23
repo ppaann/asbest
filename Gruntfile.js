@@ -148,5 +148,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dist', ['clean:build', 'bower:dist', 'includeSource', 'compass:dist', 'copy:dist']);
   grunt.registerTask('build', ['clean:build', 'compass:dev', 'includeSource', 'bower:dist',]);
-  grunt.registerTask('default', ['connect', 'watch']);
+  grunt.registerTask('default', ['includeSource', 'compass:dev', 'connect', 'watch']);
 };
